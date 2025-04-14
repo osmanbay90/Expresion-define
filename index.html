@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn English Expressions with Coach Shane</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-language me-2"></i>
+                English Expressions
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#all-expressions">
+                            <i class="fas fa-list me-1"></i>
+                            All Expressions
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">
+                            <i class="fas fa-folder me-1"></i>
+                            Categories
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hero-section text-center mb-5">
+                    <h1 class="display-4 mb-3">Learn English Expressions</h1>
+                    <p class="lead">Master common English expressions with interactive examples</p>
+                    <div class="search-container mb-4">
+                        <div class="search-wrapper">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" id="searchInput" class="form-control" placeholder="Search expressions...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="categories-sidebar">
+                    <h4 class="categories-header">
+                        <i class="fas fa-list"></i> Categories
+                    </h4>
+                    <div class="categories-list" id="categoriesList">
+                        <!-- Categories will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div id="expressionsContainer" class="expressions-grid">
+                    <!-- Expressions will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="expressionModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Expression Details
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 id="modalExpression" class="expression-title"></h4>
+                    <div class="definition-section">
+                        <div class="section-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div id="modalDefinition" class="section-content"></div>
+                    </div>
+                    <div class="example-section">
+                        <div class="section-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <div id="modalExample" class="section-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
